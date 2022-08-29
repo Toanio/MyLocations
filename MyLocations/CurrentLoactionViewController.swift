@@ -18,6 +18,7 @@ class CurrentLoactionViewController: UIViewController, CLLocationManagerDelegate
     @IBOutlet weak var getButton: UIButton!
     
     let locationManager = CLLocationManager()
+    var location: CLLocation?
     
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
         print("didFailWithError \(error.localizedDescription)")
@@ -26,6 +27,9 @@ class CurrentLoactionViewController: UIViewController, CLLocationManagerDelegate
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
          let newLocation = locations.last!
          print("didUpdateLocations \(newLocation)")
+        
+        location = newLocation
+        updateLabels()
     }
 
     override func viewDidLoad() {
@@ -53,6 +57,25 @@ class CurrentLoactionViewController: UIViewController, CLLocationManagerDelegate
         kCLLocationAccuracyNearestTenMeters
         locationManager.startUpdatingLocation()
         
+    }
+    
+    func updateLabels() {
+        if let location = location {
+            latitudeLabel.text = String(
+            format: "%.8f",
+            location.coordinate.latitude)
+            longtitudeLabel.text = String(
+            format: "%.8f",
+            location.coordinate.longitude)
+            tagButton.isHidden = false
+            messageLabel.text = ""
+        } else {
+            latitudeLabel.text = ""
+            longtitudeLabel.text = ""
+            addressLabel.text = ""
+            tagButton.isHidden = true
+            messageLabel.text =  "Tap 'Get My Location' to Start"
+        }
     }
     
     func showLocationServicesDeniedAlert() {
