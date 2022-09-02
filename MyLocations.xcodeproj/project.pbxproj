@@ -14,6 +14,7 @@
 		B0065F0228BD03F300A17F8A /* MyLocations.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B0065F0028BD03F300A17F8A /* MyLocations.xcdatamodeld */; };
 		B0065F0428BD03F800A17F8A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B0065F0328BD03F800A17F8A /* Assets.xcassets */; };
 		B0065F0728BD03F800A17F8A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0065F0528BD03F800A17F8A /* LaunchScreen.storyboard */; };
+		B0065F0F28C258A300A17F8A /* LocationDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0065F0E28C258A300A17F8A /* LocationDetailsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		B0065F0328BD03F800A17F8A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B0065F0628BD03F800A17F8A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B0065F0828BD03F800A17F8A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B0065F0E28C258A300A17F8A /* LocationDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDetailsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 				B0065F0528BD03F800A17F8A /* LaunchScreen.storyboard */,
 				B0065F0828BD03F800A17F8A /* Info.plist */,
 				B0065F0028BD03F300A17F8A /* MyLocations.xcdatamodeld */,
+				B0065F0E28C258A300A17F8A /* LocationDetailsViewController.swift */,
 			);
 			path = MyLocations;
 			sourceTree = "<group>";
@@ -145,6 +148,7 @@
 				B0065EF828BD03F300A17F8A /* AppDelegate.swift in Sources */,
 				B0065F0228BD03F300A17F8A /* MyLocations.xcdatamodeld in Sources */,
 				B0065EFA28BD03F300A17F8A /* SceneDelegate.swift in Sources */,
+				B0065F0F28C258A300A17F8A /* LocationDetailsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
