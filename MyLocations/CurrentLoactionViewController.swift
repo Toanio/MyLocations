@@ -25,6 +25,7 @@ class CurrentLoactionViewController: UIViewController, CLLocationManagerDelegate
     var placemark: CLPlacemark?
     var performingReverceGeocoding = false
     var lastGeocodingError: Error?
+    var timer: Timer?
     
     
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
@@ -201,6 +202,13 @@ class CurrentLoactionViewController: UIViewController, CLLocationManagerDelegate
             locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
             locationManager.startUpdatingLocation()
             updatingLocation = true
+            
+            timer = Timer.scheduledTimer(
+                timeInterval: 60,
+                target: self,
+                selector: #selector(didTimeOut),
+                userInfo: nil,
+                repeats: false)
         }
     }
     
@@ -209,6 +217,22 @@ class CurrentLoactionViewController: UIViewController, CLLocationManagerDelegate
             locationManager.stopUpdatingLocation()
             locationManager.delegate = nil
             updatingLocation = false
+            
+            if let timer = timer {
+                timer.invalidate()
+            }
+        }
+    }
+    
+    @objc func didTimeOut() {
+        print("*** Time out")
+        if location == nil {
+            stopLocationManager()
+            lastLocationError = NSError(
+                domain: "MyLocationErrorDomain",
+                code: 1,
+                userInfo: nil)
+            updateLabels()
         }
     }
     
