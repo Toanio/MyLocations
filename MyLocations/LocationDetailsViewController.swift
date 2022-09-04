@@ -19,7 +19,7 @@ class LocationDetailsViewController: UITableViewController {
         navigationController?.popViewController(animated: true)
     }
      
-    @IBAction func close() {
+    @IBAction func cancel() {
         navigationController?.popViewController(animated: true)
     }
 }
