@@ -15,6 +15,7 @@
 		B0065F0428BD03F800A17F8A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B0065F0328BD03F800A17F8A /* Assets.xcassets */; };
 		B0065F0728BD03F800A17F8A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0065F0528BD03F800A17F8A /* LaunchScreen.storyboard */; };
 		B0065F0F28C258A300A17F8A /* LocationDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0065F0E28C258A300A17F8A /* LocationDetailsViewController.swift */; };
+		B0065F1128C4575700A17F8A /* CategoryPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0065F1028C4575700A17F8A /* CategoryPickerViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		B0065F0628BD03F800A17F8A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B0065F0828BD03F800A17F8A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B0065F0E28C258A300A17F8A /* LocationDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDetailsViewController.swift; sourceTree = "<group>"; };
+		B0065F1028C4575700A17F8A /* CategoryPickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryPickerViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 				B0065F0828BD03F800A17F8A /* Info.plist */,
 				B0065F0028BD03F300A17F8A /* MyLocations.xcdatamodeld */,
 				B0065F0E28C258A300A17F8A /* LocationDetailsViewController.swift */,
+				B0065F1028C4575700A17F8A /* CategoryPickerViewController.swift */,
 			);
 			path = MyLocations;
 			sourceTree = "<group>";
@@ -144,6 +147,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B0065F1128C4575700A17F8A /* CategoryPickerViewController.swift in Sources */,
 				B0065EFC28BD03F300A17F8A /* CurrentLoactionViewController.swift in Sources */,
 				B0065EF828BD03F300A17F8A /* AppDelegate.swift in Sources */,
 				B0065F0228BD03F300A17F8A /* MyLocations.xcdatamodeld in Sources */,
