@@ -18,6 +18,8 @@
 		B0065F1128C4575700A17F8A /* CategoryPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0065F1028C4575700A17F8A /* CategoryPickerViewController.swift */; };
 		B0065F1328C5B38C00A17F8A /* HudView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0065F1228C5B38C00A17F8A /* HudView.swift */; };
 		B0065F1528C5C2C800A17F8A /* Funcctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0065F1428C5C2C800A17F8A /* Funcctions.swift */; };
+		B0065F1828C6F46A00A17F8A /* Location+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0065F1628C6F46A00A17F8A /* Location+CoreDataClass.swift */; };
+		B0065F1928C6F46A00A17F8A /* Location+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0065F1728C6F46A00A17F8A /* Location+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +36,8 @@
 		B0065F1028C4575700A17F8A /* CategoryPickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryPickerViewController.swift; sourceTree = "<group>"; };
 		B0065F1228C5B38C00A17F8A /* HudView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HudView.swift; sourceTree = "<group>"; };
 		B0065F1428C5C2C800A17F8A /* Funcctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Funcctions.swift; sourceTree = "<group>"; };
+		B0065F1628C6F46A00A17F8A /* Location+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Location+CoreDataClass.swift"; sourceTree = "<group>"; };
+		B0065F1728C6F46A00A17F8A /* Location+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Location+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,6 +54,8 @@
 		B0065EEB28BD03F300A17F8A = {
 			isa = PBXGroup;
 			children = (
+				B0065F1628C6F46A00A17F8A /* Location+CoreDataClass.swift */,
+				B0065F1728C6F46A00A17F8A /* Location+CoreDataProperties.swift */,
 				B0065EF628BD03F300A17F8A /* MyLocations */,
 				B0065EF528BD03F300A17F8A /* Products */,
 			);
@@ -157,8 +163,10 @@
 				B0065EFC28BD03F300A17F8A /* CurrentLoactionViewController.swift in Sources */,
 				B0065EF828BD03F300A17F8A /* AppDelegate.swift in Sources */,
 				B0065F0228BD03F300A17F8A /* MyLocations.xcdatamodeld in Sources */,
+				B0065F1928C6F46A00A17F8A /* Location+CoreDataProperties.swift in Sources */,
 				B0065EFA28BD03F300A17F8A /* SceneDelegate.swift in Sources */,
 				B0065F1328C5B38C00A17F8A /* HudView.swift in Sources */,
+				B0065F1828C6F46A00A17F8A /* Location+CoreDataClass.swift in Sources */,
 				B0065F0F28C258A300A17F8A /* LocationDetailsViewController.swift in Sources */,
 				B0065F1528C5C2C800A17F8A /* Funcctions.swift in Sources */,
 			);
