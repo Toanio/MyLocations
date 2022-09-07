@@ -71,7 +71,7 @@ class LocationDetailsViewController: UITableViewController {
         location.latitdue = coordinate.latitude
         location.longtitude = coordinate.longitude
         location.date = date
-        location.placemark = placemark!
+        location.placemark = placemark
         
         do {
             try managedObjectContext.save()
