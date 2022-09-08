@@ -21,6 +21,7 @@
 		B0065F1828C6F46A00A17F8A /* Location+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0065F1628C6F46A00A17F8A /* Location+CoreDataClass.swift */; };
 		B0065F1928C6F46A00A17F8A /* Location+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0065F1728C6F46A00A17F8A /* Location+CoreDataProperties.swift */; };
 		B0065F1B28C8E85100A17F8A /* LocationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0065F1A28C8E85100A17F8A /* LocationsViewController.swift */; };
+		B0065F1D28C9BF6500A17F8A /* LocationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0065F1C28C9BF6500A17F8A /* LocationCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		B0065F1628C6F46A00A17F8A /* Location+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Location+CoreDataClass.swift"; sourceTree = "<group>"; };
 		B0065F1728C6F46A00A17F8A /* Location+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Location+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		B0065F1A28C8E85100A17F8A /* LocationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsViewController.swift; sourceTree = "<group>"; };
+		B0065F1C28C9BF6500A17F8A /* LocationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +89,7 @@
 				B0065EFD28BD03F300A17F8A /* Main.storyboard */,
 				B0065F0028BD03F300A17F8A /* MyLocations.xcdatamodeld */,
 				B0065EF928BD03F300A17F8A /* SceneDelegate.swift */,
+				B0065F1C28C9BF6500A17F8A /* LocationCell.swift */,
 			);
 			path = MyLocations;
 			sourceTree = "<group>";
@@ -164,6 +167,7 @@
 			files = (
 				B0065F1128C4575700A17F8A /* CategoryPickerViewController.swift in Sources */,
 				B0065EFC28BD03F300A17F8A /* CurrentLoactionViewController.swift in Sources */,
+				B0065F1D28C9BF6500A17F8A /* LocationCell.swift in Sources */,
 				B0065EF828BD03F300A17F8A /* AppDelegate.swift in Sources */,
 				B0065F0228BD03F300A17F8A /* MyLocations.xcdatamodeld in Sources */,
 				B0065F1928C6F46A00A17F8A /* Location+CoreDataProperties.swift in Sources */,

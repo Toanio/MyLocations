@@ -119,7 +119,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="LocationCell" rowHeight="65" id="g0k-0s-lrA">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="LocationCell" rowHeight="65" id="g0k-0s-lrA" customClass="LocationCell" customModule="MyLocations" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="44.5" width="375" height="65"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="g0k-0s-lrA" id="bpe-qx-UJY">
@@ -147,6 +147,10 @@
                                         <constraint firstItem="rDQ-mG-eZg" firstAttribute="leading" secondItem="bpe-qx-UJY" secondAttribute="leadingMargin" id="zdP-0a-MTU"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="addressLabel" destination="rDQ-mG-eZg" id="Pt7-16-pdP"/>
+                                    <outlet property="descriptionLabel" destination="069-m1-bWf" id="4rJ-qt-pbt"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
