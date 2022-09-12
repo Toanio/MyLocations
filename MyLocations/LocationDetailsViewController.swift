@@ -49,6 +49,8 @@ class LocationDetailsViewController: UITableViewController {
         }
     }
     var image: UIImage?
+    var observer: Any!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         if let location = locationToEdit {
@@ -78,6 +80,7 @@ class LocationDetailsViewController: UITableViewController {
             action: #selector(hideKeyboard))
         gestureRecognizer.cancelsTouchesInView = false
         tableView.addGestureRecognizer(gestureRecognizer)
+        listenForBackgroundNotification()
     }
     
     @IBAction func done() {
@@ -168,6 +171,25 @@ class LocationDetailsViewController: UITableViewController {
         addPhotoLabel.text = ""
         imageHeight.constant = 260
         tableView.reloadData()
+    }
+    
+    func listenForBackgroundNotification() {
+        observer = NotificationCenter.default.addObserver(
+            forName: UIScene.didEnterBackgroundNotification,
+            object: nil,
+            queue: OperationQueue.main ) { [weak self] _ in
+                if let weakSelf = self {
+                    if weakSelf.presentedViewController != nil {
+                        weakSelf.dismiss(animated: false, completion: nil)
+                    }
+                    weakSelf.descriptionTextView.resignFirstResponder()
+                }
+            }
+    }
+    
+    deinit{
+        print("*** deinit \(self)")
+        NotificationCenter.default.removeObserver(observer!)
     }
     
     //MARK: - Navigation
