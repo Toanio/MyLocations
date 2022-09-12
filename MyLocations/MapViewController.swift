@@ -12,7 +12,20 @@ import CoreData
 class MapViewController: UIViewController {
     @IBOutlet var mapView: MKMapView!
     
-    var managedObjectContext: NSManagedObjectContext!
+    var managedObjectContext: NSManagedObjectContext! {
+        didSet {
+            NotificationCenter.default.addObserver(
+                forName: Notification.Name.NSManagedObjectContextObjectsDidChange,
+                object: managedObjectContext,
+                queue: OperationQueue.main
+            ) {
+                _ in
+                if self.isViewLoaded {
+                    self.updateLocations()
+                }
+            }
+        }
+    }
     var locations = [Location] ()
     
     override func viewDidLoad() {
@@ -92,7 +105,7 @@ class MapViewController: UIViewController {
     }
     
     @objc func showLocationDetails(_ sender: UIButton) {
-        
+        performSegue(withIdentifier: "EditLocation", sender: sender)
     }
     
     func region(for annotations: [MKAnnotation]) ->
@@ -137,6 +150,21 @@ class MapViewController: UIViewController {
             region = MKCoordinateRegion(center: center, span: span)
         }
         return mapView.regionThatFits(region)
+    }
+    
+    //MARK: - Navigation
+    override func prepare(
+        for segue: UIStoryboardSegue,
+        sender: Any?
+    ) {
+        if segue.identifier == "EditLocation" {
+            let controller = segue.destination as! LocationDetailsViewController
+            controller.managedObjectContext = managedObjectContext
+            
+            let button = sender as! UIButton
+            let location = locations[button.tag]
+            controller.locationToEdit = location
+        }
     }
     
 }
