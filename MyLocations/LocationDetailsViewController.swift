@@ -23,6 +23,8 @@ class LocationDetailsViewController: UITableViewController {
     @IBOutlet var longtitudeLabel: UILabel!
     @IBOutlet var addressLabel: UILabel!
     @IBOutlet var dateLabel: UILabel!
+    @IBOutlet var imageView: UIImageView!
+    @IBOutlet var addPhotoLabel: UILabel!
     
     var coordinate = CLLocationCoordinate2D(
         latitude: 0,
@@ -45,6 +47,7 @@ class LocationDetailsViewController: UITableViewController {
             }
         }
     }
+    var image: UIImage?
     override func viewDidLoad() {
         super.viewDidLoad()
         if let location = locationToEdit {
@@ -158,6 +161,12 @@ class LocationDetailsViewController: UITableViewController {
         descriptionTextView.resignFirstResponder()
     }
     
+    func show(image: UIImage) {
+        imageView.image = image
+        imageView.isHidden = false
+        addPhotoLabel.text = ""
+    }
+    
     //MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "PickCategory" {
@@ -197,6 +206,10 @@ extension LocationDetailsViewController: UIImagePickerControllerDelegate, UINavi
         _ picker: UIImagePickerController,
         didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]
     ) {
+        image = info[UIImagePickerController.InfoKey.editedImage] as? UIImage
+        if let theImage = image {
+            show(image: theImage)
+        }
         dismiss(animated: true,completion: nil)
     }
     
