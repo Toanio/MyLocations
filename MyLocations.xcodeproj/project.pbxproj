@@ -24,6 +24,7 @@
 		B0065F1D28C9BF6500A17F8A /* LocationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0065F1C28C9BF6500A17F8A /* LocationCell.swift */; };
 		B0065F1F28CB861900A17F8A /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0065F1E28CB861900A17F8A /* MapViewController.swift */; };
 		B08FEDE228D21762009075EA /* UIImage+Resize.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08FEDE128D21762009075EA /* UIImage+Resize.swift */; };
+		B08FEDE428D222A5009075EA /* String+ AddText.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08FEDE328D222A5009075EA /* String+ AddText.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		B0065F1C28C9BF6500A17F8A /* LocationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationCell.swift; sourceTree = "<group>"; };
 		B0065F1E28CB861900A17F8A /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		B08FEDE128D21762009075EA /* UIImage+Resize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Resize.swift"; sourceTree = "<group>"; };
+		B08FEDE328D222A5009075EA /* String+ AddText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+ AddText.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +98,7 @@
 				B0065EF928BD03F300A17F8A /* SceneDelegate.swift */,
 				B0065F1C28C9BF6500A17F8A /* LocationCell.swift */,
 				B0065F1E28CB861900A17F8A /* MapViewController.swift */,
+				B08FEDE328D222A5009075EA /* String+ AddText.swift */,
 			);
 			path = MyLocations;
 			sourceTree = "<group>";
@@ -176,6 +179,7 @@
 				B0065F1D28C9BF6500A17F8A /* LocationCell.swift in Sources */,
 				B0065EF828BD03F300A17F8A /* AppDelegate.swift in Sources */,
 				B0065F0228BD03F300A17F8A /* MyLocations.xcdatamodeld in Sources */,
+				B08FEDE428D222A5009075EA /* String+ AddText.swift in Sources */,
 				B0065F1928C6F46A00A17F8A /* Location+CoreDataProperties.swift in Sources */,
 				B0065F1F28CB861900A17F8A /* MapViewController.swift in Sources */,
 				B08FEDE228D21762009075EA /* UIImage+Resize.swift in Sources */,
