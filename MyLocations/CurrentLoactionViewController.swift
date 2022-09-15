@@ -17,6 +17,9 @@ class CurrentLoactionViewController: UIViewController, CLLocationManagerDelegate
     @IBOutlet weak var addressLabel: UILabel!
     @IBOutlet weak var tagButton: UIButton!
     @IBOutlet weak var getButton: UIButton!
+    @IBOutlet weak var latitudeTextLabel: UILabel!
+    @IBOutlet weak var longtitudeTextLabel: UILabel!
+    @IBOutlet weak var containerView: UIView!
     
     let locationManager = CLLocationManager()
     var location: CLLocation?
@@ -28,6 +31,21 @@ class CurrentLoactionViewController: UIViewController, CLLocationManagerDelegate
     var lastGeocodingError: Error?
     var timer: Timer?
     var managedObjectContext: NSManagedObjectContext!
+    var logoVisible = false
+    lazy var logoButton: UIButton = {
+        let button = UIButton(type: .custom)
+        button.setBackgroundImage(
+            UIImage(named: "Logo"),
+            for: .normal)
+        button.sizeToFit()
+        button.addTarget(
+            self,
+            action: #selector(getLocation),
+            for: .touchUpInside)
+        button.center.x = self.view.bounds.midX
+        button.center.y = 220
+        return button
+    } ()
     
     
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
@@ -121,6 +139,9 @@ class CurrentLoactionViewController: UIViewController, CLLocationManagerDelegate
          locationManager.requestWhenInUseAuthorization()
          return
         }
+        if logoVisible {
+            hideLogoView()
+        }
         
         if authStatus == .denied || authStatus == .restricted {
          showLocationServicesDeniedAlert()
@@ -160,6 +181,8 @@ class CurrentLoactionViewController: UIViewController, CLLocationManagerDelegate
             } else {
                 addressLabel.text = "No Address Found"
             }
+            latitudeTextLabel.isHidden = false
+            longtitudeTextLabel.isHidden = false
         } else {
             latitudeLabel.text = ""
             longtitudeLabel.text = ""
@@ -178,10 +201,13 @@ class CurrentLoactionViewController: UIViewController, CLLocationManagerDelegate
             } else if updatingLocation {
                 statusMessage = "Searching..."
             } else {
-                statusMessage = "Tap 'Get My Location' to Start"
+                statusMessage = ""
+                showLogoView()
             }
             messageLabel.text = statusMessage
             configureGetButton()
+            latitudeTextLabel.isHidden = true
+            longtitudeTextLabel.isHidden = true
         }
     }
     
@@ -260,7 +286,18 @@ class CurrentLoactionViewController: UIViewController, CLLocationManagerDelegate
         
         present(alert, animated: true, completion: nil)
     }
-    
+    func showLogoView() {
+        if !logoVisible {
+            logoVisible = true
+            containerView.isHidden = true
+            view.addSubview(logoButton)
+        }
+    }
+    func hideLogoView() {
+        logoVisible = false
+        containerView.isHidden = false
+        logoButton.removeFromSuperview()
+    }
     // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "TagLocation" {
