@@ -223,6 +223,7 @@
                                                     <color key="textColor" systemColor="labelColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                    <dataDetectorType key="dataDetectorTypes" calendarEvent="YES"/>
                                                 </textView>
                                             </subviews>
                                             <constraints>
@@ -252,7 +253,7 @@
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
                                                     <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
+                                                    <color key="highlightedColor" red="1" green="1" blue="1" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
@@ -317,7 +318,7 @@
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
                                                     <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
+                                                    <color key="highlightedColor" white="1" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
@@ -341,7 +342,7 @@
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
                                                     <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
+                                                    <color key="highlightedColor" red="1" green="1" blue="1" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
@@ -363,7 +364,7 @@
                                                     <rect key="frame" x="326" y="14.5" width="33" height="15"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                     <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
+                                                    <color key="highlightedColor" red="1" green="1" blue="1" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
@@ -394,7 +395,7 @@
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
                                                     <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
+                                                    <color key="highlightedColor" white="1" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
@@ -433,7 +434,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="s5W-u8-1gl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2841" y="80"/>
+            <point key="canvasLocation" x="2840.8000000000002" y="79.610194902548727"/>
         </scene>
         <!--Category Picker View Controller-->
         <scene sceneID="Mon-bw-hki">
