@@ -8,6 +8,7 @@
 import UIKit
 import CoreLocation
 import CoreData
+import AudioToolbox
 
 class CurrentLoactionViewController: UIViewController, CLLocationManagerDelegate, CAAnimationDelegate{
     
@@ -46,6 +47,7 @@ class CurrentLoactionViewController: UIViewController, CLLocationManagerDelegate
         button.center.y = 220
         return button
     } ()
+    var soundID: SystemSoundID = 0
     
     
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
@@ -98,6 +100,10 @@ class CurrentLoactionViewController: UIViewController, CLLocationManagerDelegate
             geocoder.reverseGeocodeLocation(newLocation){ placemark, error in
                 self.lastGeocodingError = error
                 if error == nil, let places = placemark, !places.isEmpty {
+                    if self.placemark == nil {
+                        print("FIRST TIME!")
+                        self.playSoundEffect()
+                    }
                     self.placemark = places.last!
                 } else {
                     self.placemark = nil
@@ -128,6 +134,7 @@ class CurrentLoactionViewController: UIViewController, CLLocationManagerDelegate
     override func viewDidLoad() {
         super.viewDidLoad()
         updateLabels()
+        loadSoundEffect("Sound.caf")
     }
     
     
@@ -369,5 +376,24 @@ class CurrentLoactionViewController: UIViewController, CLLocationManagerDelegate
         
     }
 
+    //MARK: - Sound effects
+    func loadSoundEffect(_ name: String) {
+        if let path = Bundle.main.path(forResource: name, ofType: nil)
+        {
+            let fileURL = URL(fileURLWithPath: path, isDirectory: false)
+            let error = AudioServicesCreateSystemSoundID(fileURL as CFURL, &soundID)
+            if error != kAudioServicesNoError {
+                print("Error code \(error) loading sound: \(path)")
+            }
+        }
+    }
+    func unloadSoundEffect() {
+        AudioServicesDisposeSystemSoundID(soundID)
+        soundID = 0
+    }
+    
+    func playSoundEffect() {
+        AudioServicesPlaySystemSound(soundID)
+    }
 }
 

@@ -25,6 +25,7 @@
 		B0065F1F28CB861900A17F8A /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0065F1E28CB861900A17F8A /* MapViewController.swift */; };
 		B08FEDE228D21762009075EA /* UIImage+Resize.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08FEDE128D21762009075EA /* UIImage+Resize.swift */; };
 		B08FEDE428D222A5009075EA /* String+ AddText.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08FEDE328D222A5009075EA /* String+ AddText.swift */; };
+		B08FEDE628D5182C009075EA /* Sound in Resources */ = {isa = PBXBuildFile; fileRef = B08FEDE528D5182C009075EA /* Sound */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +49,7 @@
 		B0065F1E28CB861900A17F8A /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		B08FEDE128D21762009075EA /* UIImage+Resize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Resize.swift"; sourceTree = "<group>"; };
 		B08FEDE328D222A5009075EA /* String+ AddText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+ AddText.swift"; sourceTree = "<group>"; };
+		B08FEDE528D5182C009075EA /* Sound */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Sound; path = "../../../Downloads/ia-materials-editions-10.0/03-my-locations/Resources/Sound"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 				B0065F1C28C9BF6500A17F8A /* LocationCell.swift */,
 				B0065F1E28CB861900A17F8A /* MapViewController.swift */,
 				B08FEDE328D222A5009075EA /* String+ AddText.swift */,
+				B08FEDE528D5182C009075EA /* Sound */,
 			);
 			path = MyLocations;
 			sourceTree = "<group>";
@@ -163,6 +166,7 @@
 			files = (
 				B0065F0728BD03F800A17F8A /* LaunchScreen.storyboard in Resources */,
 				B0065F0428BD03F800A17F8A /* Assets.xcassets in Resources */,
+				B08FEDE628D5182C009075EA /* Sound in Resources */,
 				B0065EFF28BD03F300A17F8A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
